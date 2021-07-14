@@ -17,6 +17,7 @@ class LabeledDataset:
         self.file = h5py.File(path, mode='r')
         self.color_maps = self.file['images']
         self.depth_maps = self.file['depths']
+        self.labeled_maps = self.file['labels']
 
     def close(self):
         """Closes the HDF5 file from which the dataset is read."""
@@ -35,4 +36,8 @@ class LabeledDataset:
         depth_image = Image.fromarray(depth_map, mode='F')
         depth_image = rotate_image(depth_image)
 
-        return color_image, depth_image
+        labeled_map = self.labeled_maps[idx]
+        labeled_image = Image.fromarray(labeled_map)
+        labeled_image = rotate_image(labeled_image)
+
+        return color_image, depth_image, labeled_image
