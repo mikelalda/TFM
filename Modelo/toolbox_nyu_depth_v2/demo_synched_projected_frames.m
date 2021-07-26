@@ -1,8 +1,8 @@
 % The directory where you extracted the raw dataset.
-datasetDir = '[D:\Ikasketak\UNIR\08_TFM\TFM\Modelo\dataset]';
+datasetDir = 'D:/Ikasketak/UNIR/08_TFM/TFM\Modelo/dataset';
 
 % The name of the scene to demo.
-sceneName = '[NAME OF A SCENE YOU WANT TO VIEW]';
+sceneName = 'basements';
 
 % The absolute directory of the 
 sceneDir = sprintf('%s/%s', datasetDir, sceneName);

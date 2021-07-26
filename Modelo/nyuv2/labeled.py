@@ -33,7 +33,9 @@ class LabeledDataset:
         color_image = rotate_image(color_image)
 
         depth_map = self.depth_maps[idx]
-        depth_image = Image.fromarray(depth_map, mode='F')
+        # depth_map = (depth_map/16)*255
+        # depth_map = depth_map.astype(np.int)
+        depth_image = Image.fromarray(depth_map)
         depth_image = rotate_image(depth_image)
 
         labeled_map = self.labeled_maps[idx]
