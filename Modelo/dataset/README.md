@@ -8,4 +8,3 @@ More specifically, the files the test code will try to load are:
 - `nyu_depth_v2_labeled.mat` for the labeled subset
 
 - At least one part of the raw dataset, as `*.zip` files
-  (for example, download and place `cafe.zip` here)
